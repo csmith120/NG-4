@@ -6,6 +6,7 @@
   <app-auth />
   
   
-  <p *appAuth="'admin'">Only admins can see this!</p>
+  <p *appAuth="'admin'" class="protected-content admin">Only admins can see this!</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">regular users can see this!</p>
   
 </main>
