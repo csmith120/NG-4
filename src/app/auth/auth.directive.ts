@@ -16,9 +16,9 @@ export class AuthDirective {
   constructor() { 
     effect(() => {
       if (this.authService.activePermission() === this.userType()){
-        console.log('SHOW ELEMENT')
+        this.viewContainerRef.createEmbeddedView(this.templateRef);
       } else {
-        console.log('DO NOT SHOW ELEMENT')
+        this.viewContainerRef.clear();
       }
     });
   }

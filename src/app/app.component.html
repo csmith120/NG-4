@@ -4,11 +4,8 @@
   <hr />
 
   <app-auth />
-  <!--@if (isAdmin()) {
-
-    <p>Only admins can see this!</p>
-  }-->
-  <ng-template appAuth="admin">
-    <p>Only admins can see this!</p>
-  </ng-template>
+  
+  
+  <p *appAuth="'admin'">Only admins can see this!</p>
+  
 </main>
