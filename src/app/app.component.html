@@ -4,10 +4,14 @@
   <hr />
 
   <app-auth />
-  
-  
-  <p *appAuth="'admin'" class="protected-content admin">Only admins can see this!</p>
-  <p *appAuth="'user'" class="protected-content unauthenticated">regular users can see this!</p>
-  <p *appAuth="'guest'" class="protected-content authenticated">guest users can see this!</p>
-  
+
+  <p *appAuth="'admin'" appLog class="protected-content admin">
+    Only admins can see this!
+  </p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">
+    regular users can see this!
+  </p>
+  <p *appAuth="'guest'" class="protected-content authenticated">
+    guest users can see this!
+  </p>
 </main>
